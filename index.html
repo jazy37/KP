@@ -73,6 +73,29 @@
         z-index: 2;
       }
       /* === End Shine Button Hover Effect === */
+      /* === Grayscale Background for Hero === */
+      section#hero::before {
+        content: ""; /* Niezbędne dla pseudo-elementu */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          /* --- Koniec opcjonalnej nakładki --- */ url("compressed.jpg"); /* Twoje zdjęcie */
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(100%); /* Filtr czarno-biały TYLKO dla tła */
+        z-index: -1; /* Umieść tło za treścią */
+      }
+
+      section#hero {
+        position: relative;
+      }
+      /* === End Grayscale Background === */
     </style>
   </head>
   <body class="bg-white text-gray-900 antialiased">
@@ -80,11 +103,12 @@
       <nav
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <a
-          href="#"
-          class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent transition duration-300"
-        >
-          Kreatorka Marki Osobistej
+        <a href="#" class="text-2xl font-bold transition duration-300">
+          <img
+            src="logo.png"
+            alt="Logo Kreatorki Marki Osobistej"
+            style="max-height: 2.5em; vertical-align: middle"
+          />
         </a>
 
         <div class="hidden md:flex space-x-6 items-center">
@@ -158,18 +182,7 @@
     </header>
 
     <main>
-      <section
-        id="hero"
-        class="relative py-20 md:py-32 bg-cover bg-center"
-        style="
-          /* Zmieniono overlay na ciemny */
-          background-image: linear-gradient(
-              rgba(0, 0, 0, 0.7),
-              rgba(0, 0, 0, 0.5)
-            ),
-            url('compressed.jpg');
-        "
-      >
+      <section id="hero" class="relative py-20 md:py-32 bg-cover bg-center">
         <div class="container mx-auto px-6 text-center hero-fade-in">
           <h1
             class="text-4xl md:text-6xl font-bold text-amber-400 mb-4 leading-tight"
@@ -405,7 +418,7 @@
         >
           <div class="rounded-lg overflow-hidden shadow-xl">
             <img
-              src="Klaudia-photo.jpg"
+              src="photo.jpg"
               alt="Zdjęcie Kreatorki Marki Osobistej"
               class="w-full h-auto object-cover"
             />
