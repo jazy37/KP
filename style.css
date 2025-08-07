@@ -864,6 +864,7 @@ h2 {
 @media (max-width: 768px) {
     .challenges-section {
         padding: 60px 20px;
+        width: 100vw;
     }
 
     h2 {
