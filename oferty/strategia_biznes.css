@@ -1,0 +1,442 @@
+/* 
+   Style specyficzne dla strony Oferta (oferta.html).
+   Plik ładowany PO style.css.
+*/
+
+/* Hero Section */
+.offer-hero-container {
+    height: 85vh;
+    min-height: 400px;
+}
+
+.hero-offer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.hero-strategia {
+    background-image: url('../img/oferty/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    /* Tekst na dole */
+    padding-bottom: 80px;
+    /* Odstęp od dołu */
+    position: relative;
+    z-index: 1;
+}
+
+/* Przyciemnienie tła (overlay) dla czytelności tekstu */
+.hero-strategia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Półprzezroczysta czarna powłoka */
+    z-index: 1;
+    /* Overlay on top of background */
+}
+
+.hero-strategia .hero-text-flex {
+    max-width: 800px;
+    text-align: left;
+    position: relative;
+    color: #1a1a1a;
+    z-index: 2;
+    /* Text on top of overlay */
+}
+
+.hero-strategia .hero-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #1a1a1a;
+    line-height: 1.2;
+    text-transform: none;
+    /* User didn't imply uppercase for the sentence */
+}
+
+.hero-strategia .hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 0;
+    max-width: 800px;
+}
+
+
+
+/* Strategia Biznes Content Section */
+.strategia-biznes-section {
+    background-image: url('../img/oferty/bg_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    color: #fff;
+    position: relative;
+
+}
+
+.strategia-content-container {
+    /* max-width: 900px; */
+    /* margin: 0 auto; */
+    padding: 20px;
+}
+
+.strategia-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: left;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+}
+
+.strategia-intro {
+    margin-bottom: 60px;
+}
+
+.strategia-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.highlight-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-left: 4px solid #fff;
+    padding-left: 15px;
+}
+
+.strategia-blocks {
+    display: flex;
+    flex-direction: row;
+    /* Default layout: row (desktop) */
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.strategia-block {
+    flex: 1;
+    /* Equal width */
+}
+
+/* Restoring missing styles */
+.strategia-subheader {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.strategia-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.strategia-list li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #fff;
+}
+
+.strategia-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: -2px;
+}
+
+/* Quote Section */
+.strategia-quote-section {
+    background-image: url('../img/oferty/bg_3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 700px;
+}
+
+.strategia-quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Overlay for contrast */
+    z-index: 1;
+}
+
+.quote-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+}
+
+.quote-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.quote-footer {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+
+/* Responsywność */
+
+/* Tablet (i mniejsze desktopy): 3/2 (3 kolumny w rzędzie) */
+@media (max-width: 1500px) {
+
+
+    /* Mobile Hero Fixes */
+    .hero-strategia {
+        justify-content: flex-end;
+        /* Center vertically on mobile */
+        align-items: center;
+        /* Center horizontally */
+        text-align: left;
+        /* Center text */
+        padding-bottom: 40px;
+        /* Reduce bottom padding */
+        background-position: left bottom;
+        /* Better image focus */
+    }
+
+    .hero-strategia .hero-text-flex {
+        text-align: left;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .hero-strategia .hero-title {
+        font-size: 1.8rem;
+        /* Smaller title */
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .hero-strategia .hero-subtitle {
+        font-size: 1rem;
+        /* Smaller subtitle */
+        max-width: 100%;
+    }
+
+    .offer-hero-container {
+        height: 85svh;
+        min-height: 500px;
+    }
+
+    /* Strategia Biznes Mobile */
+    .strategia-content-container {
+        padding: 30px 20px;
+    }
+
+    .strategia-header {
+        font-size: 1.8rem;
+    }
+
+    .strategia-subheader {
+        font-size: 1.3rem;
+    }
+
+    /* Quote Section Mobile */
+    .quote-text {
+        font-size: 1.3rem;
+    }
+
+    .quote-footer {
+        font-size: 1.4rem;
+    }
+}
+
+/* Strategia Marketingowa Section */
+.strategia-marketing-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+    /* Light grey for contrast */
+    color: #000;
+}
+
+.strategia-marketing-section .strategia-header {
+    color: #000;
+}
+
+.strategia-marketing-section .strategia-text {
+    color: #333;
+}
+
+.strategia-marketing-section .highlight-text {
+    border-left-color: #000;
+    margin-top: 40px;
+}
+
+.strategia-marketing-section .strategia-subheader {
+    color: #000;
+}
+
+.strategia-marketing-section .strategia-subheader::before {
+    background-color: #000;
+}
+
+.strategia-marketing-section .strategia-list li {
+    color: #333;
+}
+
+.strategia-marketing-section .strategia-list li::before {
+    color: #000;
+}
+
+.strategia-list-main {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 50px;
+}
+
+.strategia-list-main li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #333;
+    line-height: 1.6;
+}
+
+.strategia-list-main li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Stack blocks on smaller screens */
+@media (max-width: 900px) {
+    .strategia-blocks {
+        flex-direction: column;
+    }
+}
+
+/* Advantage Section */
+.strategia-advantage-section {
+    background-image: url('../img/oferty/bg_4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    display: flex;
+    justify-content: flex-end;
+    /* Content on the right */
+    align-items: center;
+    /* Vertically centered */
+    padding: 50px 5%;
+    /* 5% side padding */
+    position: relative;
+    color: #fff;
+    text-align: left;
+}
+
+.strategia-advantage-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Overlay for readability */
+    z-index: 1;
+}
+
+.advantage-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    /* Semi-transparent background for text box */
+    padding: 40px;
+    border-radius: 2px;
+}
+
+.advantage-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.advantage-footer {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 30px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Advantage Section Mobile */
+@media (max-width: 900px) {
+    .strategia-advantage-section {
+        justify-content: center;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .advantage-content {
+        max-width: 100%;
+        /* Slightly darker on mobile */
+    }
+
+    .advantage-footer {
+        font-size: 1.4rem;
+    }
+}
