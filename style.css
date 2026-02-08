@@ -9,18 +9,30 @@
 }
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
-h1 { font-size: 2rem; }    /* 32px */
-p  { font-size: 1rem; }    /* 16px */
+h1 {
+    font-size: 2rem;
+}
+
+/* 32px */
+p {
+    font-size: 1rem;
+}
+
+/* 16px */
 
 @media (max-width: 768px) {
-  html { font-size: 14px; }
+    html {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
-  html { font-size: 12px; }
+    html {
+        font-size: 12px;
+    }
 }
 
 body {
@@ -305,7 +317,7 @@ body {
     flex-direction: column;
 }
 
-.hero-container{
+.hero-container {
     height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
@@ -369,7 +381,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .hero-container{
+    .hero-container {
         height: 100%;
     }
 
@@ -408,7 +420,7 @@ body {
 
 .divider-image-container {
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
     z-index: 15;
@@ -592,7 +604,7 @@ body {
 .image-container {
     flex: 1;
     position: relative;
-    background-image: url('5EB2A8CA-9B1E-4F85-B130-F1877033F037.JPEG');
+    background-image: url('img/5EB2A8CA-9B1E-4F85-B130-F1877033F037.JPEG');
     background-size: cover;
     background-position: center;
     min-height: 600px;
@@ -663,7 +675,7 @@ body {
 }
 
 .challenges-image {
-    background-image: url('image_1.png');
+    background-image: url('img/image_1.png');
     background-size: cover;
     background-position: center;
 }
@@ -719,6 +731,7 @@ body {
 .challenge-item:nth-child(6) {
     animation-delay: 0.6s;
 }
+
 .challenge-item:nth-child(7) {
     animation-delay: 0.7s
 }
@@ -749,7 +762,7 @@ body {
     display: block;
     width: 36px;
     height: 36px;
-    background-image: url('x_www.png');
+    background-image: url('img/x_www.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -891,7 +904,7 @@ body {
 
 .plate-text-box {
     background-color: rgba(255, 255, 255, 0.9);
-    background-image: url('ooij.png');
+    background-image: url('img/ooij.png');
     padding: 20px;
     max-width: 350px;
 }
@@ -912,6 +925,7 @@ body {
     .plate-section {
         min-height: 500px;
     }
+
     .plate-image {
         max-width: 800px;
     }
@@ -926,9 +940,10 @@ body {
 }
 
 @media (max-width: 480px) {
-     .plate-section {
+    .plate-section {
         min-height: 400px;
     }
+
     .plate-image {
         max-width: 700px;
     }
@@ -949,12 +964,12 @@ body {
 }
 
 .content-container {
- background-color: #e3e4e4;
- color: #333333;
+    background-color: #e3e4e4;
+    color: #333333;
 }
 
 .benefits-image {
-    background-image: url('IMG_6225.JPG');
+    background-image: url('img/IMG_6225.JPG');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -966,21 +981,21 @@ body {
     flex-shrink: 0;
     margin-top: 2px;
     /* color: #333333; */
-    background-image: url('ooo.png');
+    background-image: url('img/ooo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%);
 }
 
-.benefit-header{
+.benefit-header {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.1;
 }
 
-.benefit-text{
+.benefit-text {
     font-size: 1.25rem;
     line-height: 1.2;
     color: #333333;
@@ -1032,7 +1047,7 @@ body {
         flex: none;
     }
 
-    .svg-icon{
+    .svg-icon {
         width: 24px;
         height: 24px;
         margin-right: 15px;
@@ -1052,7 +1067,7 @@ body {
         margin-bottom: 40px;
     }
 
-    .benefit-header{
+    .benefit-header {
         font-size: 1.8rem;
         margin-bottom: 40px;
     }
@@ -1070,7 +1085,8 @@ body {
     .image-container {
         min-height: 300px;
     }
-    .branding-section .image-container{
+
+    .branding-section .image-container {
         display: none;
     }
 
@@ -1191,23 +1207,23 @@ body {
     .footer {
         padding: 30px 20px 20px;
     }
-    
+
     .footer-logo img {
         height: 80px;
     }
-    
+
     .footer-left {
         margin-bottom: 20px;
     }
-    
+
     .footer-right {
         margin-bottom: 15px;
     }
-    
+
     .footer-social {
         gap: 15px;
     }
-    
+
     .footer-legal {
         flex-direction: column;
         gap: 10px;
@@ -1218,15 +1234,13 @@ body {
     .footer-social {
         gap: 12px;
     }
-    
+
     .social-link svg {
         width: 20px;
         height: 20px;
     }
-    
+
     .footer-logo img {
         height: 60px;
     }
 }
-
-

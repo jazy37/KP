@@ -1,0 +1,170 @@
+/* 
+   Style specyficzne dla strony Oferta (oferta.html).
+   Plik ładowany PO style.css.
+*/
+
+/* Hero Section */
+.offer-hero-container {
+    height: 60vh;
+    min-height: 400px;
+}
+
+.hero-offer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Offer Grid Section */
+.offer-grid-section {
+    padding: 100px 20px;
+    background-color: #fff;
+    /* max-width zwiększony, żeby pomieścić 5 kolumn */
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.offer-grid {
+    display: grid;
+    /* Domyślnie (duże ekrany): 5 kolumn w jednym rzędzie */
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1600px;
+    gap: 30px;
+    width: 100%;
+}
+
+.offer-card {
+    /* Bez tła, bez obramowania (chyba że chcemy delikatne oddzielenie, ale user prosił 'brak tła') */
+    background-color: transparent;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    height: 100%;
+    /* Wyrównanie wysokości kart */
+}
+
+.offer-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-height: 50px;
+    /* Wyrównanie nagłówków */
+}
+
+.offer-list {
+    /* Lista nienumerowana */
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    /* Wypycha przycisk na dół */
+}
+
+.offer-list li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.offer-btn {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    /* Czarna ramka, brak tła */
+    border: 1px solid #000;
+    background-color: transparent;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+    /* Przycisk zawsze na dole */
+    display: inline-block;
+}
+
+.offer-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsywność */
+
+/* Tablet (i mniejsze desktopy): 3/2 (3 kolumny w rzędzie) */
+@media (max-width: 1300px) {
+    .offer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+}
+
+/* Mobile: 1 kolumna */
+@media (max-width: 768px) {
+    .offer-hero-container {
+        height: 50vh;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .offer-card {
+        align-items: center;
+        /* Wyśrodkowanie na mobile */
+        text-align: left;
+        /* Tekst listy do lewej */
+        padding: 30px 20px;
+        border-bottom: 1px solid #eee;
+        /* Separator na mobile */
+    }
+
+    .offer-card:nth-last-child(5) {
+        padding-top: 0;
+    }
+
+    .offer-card:nth-last-child(1) {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .offer-title {
+        min-height: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .offer-list {
+        padding-left: 20px;
+        /* Wcięcie dla kropek */
+        width: 100%;
+        max-width: 300px;
+        /* Ograniczenie szerokości listy na mobile */
+    }
+
+    .offer-btn {
+        min-width: 70%;
+        text-align: center;
+    }
+}

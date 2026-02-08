@@ -1,0 +1,241 @@
+/* 
+   Style specyficzne dla strony O mnie (about_me.html).
+   Ten plik jest ładowany PO style.css, więc reguły tutaj nadpiszą te z style.css.
+*/
+
+/* Reset dla hero container na tej stronie jeśli potrzebny, ale flex powinien zadziałać */
+
+.hero-split {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* Dopasuj do wysokości rodzica (hero-container ma calc(100vh - 70px)) */
+    min-height: 800px;
+    /* Zabezpieczenie na mniejszych ekranach */
+}
+
+/* Lewa strona - zdjęcie (40%) */
+.hero-left {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Zdjęcie wypełni obszar bez zniekształceń */
+    object-position: top;
+    display: block;
+}
+
+/* Prawa strona - tekst (60%) */
+.hero-right {
+    width: 60%;
+    background-color: #000;
+    /* Czarne tło */
+    color: #fff;
+    /* Biały tekst domyślnie */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Wyśrodkowanie w pionie */
+    align-items: flex-start;
+    /* Do lewej w poziomie */
+    padding: 60px 80px;
+    /* Duży padding dla oddechu */
+}
+
+/* Kontener na treść wewnątrz prawej strony */
+.hero-content-box {
+    max-width: 800px;
+    /* Ograniczenie szerokości tekstu dla czytelności */
+}
+
+/* Nagłówek */
+.hero-title-about {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    /* Cienki font jak w projekcie */
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.2;
+}
+
+/* Tekst paragrafów */
+.hero-text-about p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    /* Lekko złamana biel dla lepszej czytelności */
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero-text-about p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+    .hero-right {
+        padding: 40px 50px;
+    }
+
+    .hero-title-about {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Na tabletach i mobile zmieniamy układ na kolumnowy */
+    .hero-split {
+        flex-direction: column;
+        height: auto;
+        /* Wysokość zależna od treści */
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        /* Pełna szerokość */
+    }
+
+    .hero-left {
+        height: 50vh;
+        /* Zdjęcie na pół ekranu lub mniej */
+        min-height: 300px;
+    }
+
+    .hero-right {
+        padding: 40px 30px;
+    }
+
+    .hero-title-about {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* 
+   Sekcja KIM JESTEM 
+*/
+.kim-jestem-section {
+    width: 100%;
+    background-color: #fff;
+    /* Białe tło */
+    overflow: hidden;
+}
+
+.kim-jestem-container {
+    display: flex;
+    width: 100%;
+    min-height: 700px;
+}
+
+/* Lewa strona - tekst (60%) */
+.kim-jestem-left {
+    width: 60%;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9;
+    /* Delikatne szare tło dla kontrastu z hero */
+}
+
+.kim-jestem-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #333;
+    line-height: 1.2;
+}
+
+.kim-jestem-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.kim-jestem-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Prawa strona - zdjęcie (40%) */
+.kim-jestem-right {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    /* Ensure image doesn't overflow */
+}
+
+.kim-jestem-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center calc(0% - 100px);
+    display: block;
+}
+
+/* Responsywność dla sekcji Kim Jestem */
+@media (max-width: 1024px) {
+    .kim-jestem-left {
+        padding: 40px 50px;
+    }
+
+    .kim-jestem-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .kim-jestem-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .kim-jestem-left,
+    .kim-jestem-right {
+        width: 100%;
+    }
+
+    .kim-jestem-right {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .kim-jestem-left {
+        padding: 40px 30px;
+    }
+
+    .kim-jestem-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* 
+   Branding Section (Instagram Feed) 
+*/
+.branding-section {
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
