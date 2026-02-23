@@ -178,20 +178,16 @@
 /* Prawa strona - zdjęcie (40%) */
 .kim-jestem-right {
     width: 40%;
-    position: relative;
     overflow: hidden;
-    /* Ensure image doesn't overflow */
+    align-self: stretch;
+    display: flex;
+    /* Rozciągnij do wysokości sąsiedniego lewego panelu */
 }
 
 .kim-jestem-img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    object-position: center calc(0% - 50px);
-    display: block;
+    object-position: top;
 }
 
 /* Responsywność dla sekcji Kim Jestem */
