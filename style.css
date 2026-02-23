@@ -675,9 +675,10 @@ body {
 }
 
 .challenges-image {
-    background-image: url('img/image_1.png');
+    background-image: url('img/IMG_1474.JPG');
     background-size: cover;
-    background-position: center;
+    background-position: center calc(0% - 50px);
+    ;
 }
 
 .challenges-section .content-container {
@@ -952,6 +953,8 @@ body {
         font-size: 0.75rem;
     }
 }
+
+
 
 
 /* Branding Section */
